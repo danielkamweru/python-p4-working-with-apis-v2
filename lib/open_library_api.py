@@ -27,7 +27,7 @@ class Search:
         limit = 1
 
         URL = f"https://openlibrary.org/search.json?title={search_term_formatted}&fields={fields_formatted}&limit={limit}"
-        print(URL)
+        # print(URL)
         response = requests.get(URL)
         return response.json()
 
@@ -50,8 +50,8 @@ class Search:
 # results_json = Search().get_search_results_json()
 # print(json.dumps(results_json, indent=1))
 
-if __name__ == "__main__":
-    search_term = input("Enter a book title: ")
-    result = Search().get_user_search_results(search_term)
-    print("Search Result:\n")
-    print(result)
+# Uncomment the following lines to test interactively
+# search_term = input("Enter a book title: ")
+# result = Search().get_user_search_results(search_term)
+# print("Search Result:\n")
+# print(result)
